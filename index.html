@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src='js/tinymce/tinymce.js'></script>
+    <script type="text/javascript">
+        tinymce.init({
+            selector: '.wysiwyg',
+            theme: 'modern',
+            width: 600,
+            height: 300,
+            plugins: [
+                'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+                'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+                'save table contextmenu directionality emoticons template paste textcolor codesample marcz'
+            ],
+            content_css: 'css/content.css',
+            toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons | codesample marcz hermo'
+        });
+    </script>
+</head>
+
+<body>
+    <h2>Hidden WYSIWYG same config</h2>
+    <form method="post">
+        <textarea id="mytextarea3" class="hidden">Hidden, WYSIWYG!</textarea>
+    </form>
+    <h1>TinyMCE Quick Start Guide</h1>
+    <form method="post">
+        <textarea id="mytextarea" class="wysiwyg">
+            <p>Hello, World!</p>
+            <div class="hello" data-tinyleaf="hello">the quick brown
+                the quick
+                <strong>brown fox</strong> jumps over the
+                <em>
+                    <em>lazy dog</em>
+                </em>
+            </div>
+            <pre class="language-php" data-tinyleaf="markup">
+<code>&lt;?php
+echo 'hello world!';
+</code>
+            </pre>
+        </textarea>
+    </form>
+    <h2>Another WYSIWYG same config</h2>
+    <form method="post">
+        <textarea id="mytextarea2" class="wysiwyg">Hello, WYSIWYG!</textarea>
+    </form>
+
+</body>
+
+</html>
